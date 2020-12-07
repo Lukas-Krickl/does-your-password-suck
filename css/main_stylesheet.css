@@ -4,8 +4,8 @@
 }
 
 html {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   overflow: visible;
   box-sizing: border-box;
   line-height: 1;
@@ -14,14 +14,21 @@ html {
 }
 
 body {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
+  overflow: visible;
   font-family: 'Rasa', serif;
   font-size: 1.2rem;
   background: radial-gradient(69.39% 69.39% at 50% 50%, #EBEBEB 39.58%, #CDCDCD 100%);
   color: black;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 650px)  {
+  html, body, .background-txt {
+    height: 120vh;
+  }
 }
 
 a {
@@ -98,11 +105,12 @@ p {
   top: 0;
   right: 0;
   color: white;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  overflow: visible;
   word-wrap: break-word;
   font-size: 18px;
-  overflow: hidden;
+
   font-family: 'Rasa', serif;
 }
 
@@ -311,7 +319,8 @@ hr {
 }
 
 @media only screen and (max-width: 650px)  {
-  .full-screen-pane-content {
+  .full-screen-pane-content, .pane {
+    margin: .4rem;
     padding: 5%;
   }
 
