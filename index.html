@@ -47,10 +47,28 @@
             <div>
                 <div>
                     <h3>Terms of use</h3>
-                    <p>I confirm that I have read and understood the <a onclick="paneControllerModule.showPane(paneControllerModule.panes.impressumPane);">
-                        terms of use.</a></p>
+                    <p>I confirm that I have read and understood the <a
+                            onclick="paneControllerModule.showPane(paneControllerModule.panes.impressumPane);">
+                            terms of use.</a></p>
                 </div>
                 <button class="btn field field-high" onclick="paneControllerModule.acceptTermsOfUse();">confirm</button>
+            </div>
+        </div>
+        <div class="full-screen-pane" id="warning">
+            <div class="pane-wrapper">
+                <button class="pane-close-btn" onclick="paneControllerModule.hidePane(paneControllerModule.panes.warning);">
+                    <img src="icons/clear-24px.svg" alt="X"></button>
+                <div class="pane">
+                    <h3>DON'T INSERT ANY OF YOUR REAL PASSWORDS!</h3>
+                    <p>Provide new passwords that are similar in complexity to your usual ones instead.
+                        <br><br>This website should help you to improve your knowledge about password security so
+                        you can choose stronger ones in the future.
+                    </p>
+                    <div class="waring-btn-centered">
+                        <button class="btn field-blue field field-high"
+                            onclick="paneControllerModule.hidePane(paneControllerModule.panes.warning);">Understood</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="full-screen-pane hidden" id="improvement_pane">

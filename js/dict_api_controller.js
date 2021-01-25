@@ -41,7 +41,6 @@ const dictApiControllerModule = (function () {
 
         let possible_words = password.match(wordRecognitionRegex); //split into all contiguous letters
         if (!possible_words) {
-            console.log("no words found");
             return [];
         }
         
@@ -95,21 +94,9 @@ const dictApiControllerModule = (function () {
         let progress = Math.trunc((wordSearchComplete / (words.length * 2)) * 100);
         paneControllerModule.updateProgressBar(progress);
         if(progress == 100){
-            printFoundWordsToConsole();
+        
             callbackFunction(wordFound);
         }
-    }
-
-    function printFoundWordsToConsole() {
-        setTimeout(function () {
-            console.clear();
-            console.log("words searched: " + words);
-            console.log("Found Words:");
-            for (word in foundWords) {
-                console.log(word + ": " + foundWords[word]);
-            }
-        }, 1000);
-        
     }
 
 
